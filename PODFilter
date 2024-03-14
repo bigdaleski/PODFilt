@@ -1,0 +1,29 @@
+//Show Sockets
+ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
+
+//Show me that item is ethereal
+ItemDisplay[ETH]: %GRAY%[%WHITE%eth%GRAY%] %NAME%%CONTINUE%
+
+//Potions
+ItemDisplay[rvl]: %PURPLE%FullJUV
+ItemDisplay[rvs]: %PURPLE%rejuv
+ItemDisplay[hp5]: %RED%!%WHITE%Hp{%NAME%}%CONTINUE%
+ItemDisplay[mp5]: %BLUE%!%WHITE%Mp{%NAME%}%CONTINUE%
+ItemDisplay[hp1]: %RED%!%WHITE%minor hp{%NAME%}%CONTINUE%
+ItemDisplay[hp2]: %RED%!%WHITE%light hp{%NAME%}%CONTINUE%
+ItemDisplay[hp3]: %RED%!%WHITE%healing{%NAME%}%CONTINUE%
+ItemDisplay[hp4]: %RED%!%WHITE%great hp{%NAME%}%CONTINUE%
+ItemDisplay[mp1]: %BLUE%!%WHITE%minor mp{%NAME%}%CONTINUE%
+ItemDisplay[mp2]: %BLUE%!%WHITE%light mp{%NAME%}%CONTINUE%
+ItemDisplay[mp3]: %BLUE%!%WHITE%mana{%NAME%}%CONTINUE%
+ItemDisplay[mp4]: %BLUE%!%WHITE%great mp{%NAME%}%CONTINUE%
+
+//Utilites
+ItemDisplay[tsc]: %BLUE%!%WHITE%TP
+ItemDisplay[isc]: %GREEN%!%WHITE%ID
+ItemDisplay[vps CLVL>10]:
+ItemDisplay[vps CLVL<10]: %TAN%!%WHITE%stamina
+ItemDisplay[wms CLVL>10]:
+ItemDisplay[wms CLVL<10]: %TAN%!%WHITE%thaw
+ItemDisplay[yps]: %TAN%!%WHITE%ant
+ItemDisplay[key]: %GRAY%key
