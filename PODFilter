@@ -1,11 +1,18 @@
+ItemDisplay[GOLD<2000]:
+ItemDisplay[GOLD>2000]: %NAME%
+
 //Show Sockets
 ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 
-
 //Show me that item is ethereal
-ItemDisplay[ETH]:[%WHITE%eth%GRAY%]% %NAME%
+ItemDisplay[ETH]:%NAME% %GRAY%[%WHITE%eth%GRAY%]%CONTINUE%
 
-//GENERAL COLOURS
+//ALL UNIQUES SEMI HIGHLIGHTED
+ItemDisplay[UNI]:%RED%O %TAN%%NAME% %RED%O
+
+// -------------------------------------------------------------------------------------------------------------
+//						GENERAL COLOURS							|
+// -------------------------------------------------------------------------------------------------------------
 //ItemDisplay[RARE]: %YELLOW%%NAME%%CONTINUE%     // RARE
 //ItemDisplay[NMAG]: %WHITE%%NAME%%CONTINUE%	//Regular
 //ItemDisplay[MAG]: %BLUE%%NAME%%CONTINUE%	//Magic
@@ -14,8 +21,9 @@ ItemDisplay[ETH]:[%WHITE%eth%GRAY%]% %NAME%
 //ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%	//Crafted
 
 // -------------------------------------------------------------------------------------------------------------
-//						POTIONS							|
+//						POTIONS								|
 // -------------------------------------------------------------------------------------------------------------
+
 ItemDisplay[rvl]: %PURPLE%FullJUV
 ItemDisplay[rvs]: %PURPLE%rejuv
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%NAME%}%CONTINUE%
@@ -41,6 +49,7 @@ ItemDisplay[mp4 CLVL>30]:
 // -------------------------------------------------------------------------------------------------------------
 //						UTILITIES							|
 // -------------------------------------------------------------------------------------------------------------
+
 ItemDisplay[tsc]: %BLUE%!%WHITE%TP
 ItemDisplay[isc]: %GREEN%!%WHITE%ID
 ItemDisplay[vps CLVL>10]:
@@ -50,15 +59,129 @@ ItemDisplay[wms CLVL<10]: %TAN%!%WHITE%thaw
 ItemDisplay[yps]: %TAN%!%WHITE%ant
 ItemDisplay[key]: %GRAY%key
 
-//Choking, Exploding, Fulminating, Oil, Rancid, Strangling
+// -------------------------------------------------------------------------------------------------------------
+//						GEMS								|
+// -------------------------------------------------------------------------------------------------------------
 
-//Hide Arrows+Bolts
+//Gems Chipped
+ItemDisplay[gcv CLVL<30]: chipped amethyst
+ItemDisplay[gcw CLVL<30]: chipped diamond 
+ItemDisplay[gcg CLVL<30]: chipped emerald 
+ItemDisplay[gcr CLVL<30]: chipped ruby 
+ItemDisplay[gcb CLVL<30]: chipped sapphire
+ItemDisplay[gcy CLVL<30]: chipped topaz
+ItemDisplay[skc CLVL<30]: chipped skull
+ItemDisplay[gcv CLVL>29]:
+ItemDisplay[gcw CLVL>29]:
+ItemDisplay[gcg CLVL>29]:
+ItemDisplay[gcr CLVL>29]:
+ItemDisplay[gcb CLVL>29]:
+ItemDisplay[gcy CLVL>29]:
+ItemDisplay[skc CLVL>29]:
+//Gems Flawed
+ItemDisplay[gfv CLVL<40]: flawed amethyst
+ItemDisplay[gfw CLVL<40]: flawed diamond 
+ItemDisplay[gfg CLVL<40]: flawed emerald 
+ItemDisplay[gfr CLVL<40]: flawed ruby 
+ItemDisplay[gfb CLVL<40]: flawed sapphire 
+ItemDisplay[gfy CLVL<40]: flawed topaz 
+ItemDisplay[skf CLVL<40]: flawed skull
+ItemDisplay[gfv CLVL>39]:
+ItemDisplay[gfw CLVL>39]:
+ItemDisplay[gfg CLVL>39]:
+ItemDisplay[gfr CLVL>39]:
+ItemDisplay[gfb CLVL>39]:
+ItemDisplay[gfy CLVL>39]:
+ItemDisplay[skf CLVL>39]:
+//Gems Normal
+ItemDisplay[gsv CLVL<50]: amethyst 
+ItemDisplay[gsw CLVL<50]: diamond
+ItemDisplay[gsg CLVL<50]: emerald 
+ItemDisplay[gsr CLVL<50]: ruby 
+ItemDisplay[gsb CLVL<50]: sapphire
+ItemDisplay[gsy CLVL<50]: topaz
+ItemDisplay[sku CLVL<50]: skull
+ItemDisplay[gsv CLVL>49]:
+ItemDisplay[gsw CLVL>49]:
+ItemDisplay[gsg CLVL>49]:
+ItemDisplay[gsr CLVL>49]:
+ItemDisplay[gsb CLVL>49]:
+ItemDisplay[gsy CLVL>49]:
+ItemDisplay[sku CLVL>49]:
+//Gems flawless
+ItemDisplay[gzv]: %RED%O%PURPLE% Amethyst %RED%O
+ItemDisplay[glw]: %RED%O%WHITE% Diamond %RED%O
+ItemDisplay[glg]: %RED%O%GREEN% Emerald %RED%O
+ItemDisplay[glr]: %RED%O%RED% Ruby %RED%O
+ItemDisplay[glb]: %RED%O%BLUE% Sapphire %RED%O
+ItemDisplay[gly]: %RED%O%YELLOW% Topaz %RED%O
+ItemDisplay[skl]: %RED%O%GRAY% Skull %RED%O
+//Gems Perfect
+ItemDisplay[gpv]: %RED%O%PURPLE% P AMETHYST %RED%O
+ItemDisplay[gpw]: %RED%O%WHITE% P DIAMOND %RED%O
+ItemDisplay[gpg]: %RED%O%GREEN% P EMERALD %RED%O
+ItemDisplay[gpr]: %RED%O%RED% P RUBY %RED%O
+ItemDisplay[gpb]: %RED%O%BLUE% P SAPPHIRE %RED%O
+ItemDisplay[gpy]: %RED%O%YELLOW% P TOPAZ %RED%O
+ItemDisplay[skz]: %RED%O%GRAY% P SKULL %RED%O
+
+
+// -------------------------------------------------------------------------------------------------------------
+//						Hide Arrows/Bolts						|
+// -------------------------------------------------------------------------------------------------------------
 
 ItemDisplay[NMAG (aqv OR cqv)]: // hides regular arrows/bolts
 ItemDisplay[MAG (aqv OR cqv)]: // hides magic quivers if enabled
-
+// -------------------------------------------------------------------------------------------------------------
+//						Choking, Exploding, Fulminating, Oil, Rancid, Strangling	|
+// -------------------------------------------------------------------------------------------------------------
 ItemDisplay[opm]: {%NAME%}
 ItemDisplay[(gpm OR opl OR ops OR gps OR gpl)]: {%NAME%}
-ItemDisplay[(tpfs OR tpgs OR tpcs OR tpls)]: {%NAME%}
-ItemDisplay[(tpfm OR tpgm OR tpcm OR tplm)]: {%NAME%}
-ItemDisplay[(tpfl OR tpgl OR tpcl OR tpll)]: {%NAME%}
+
+// -------------------------------------------------------------------------------------------------------------
+//						OOC's, Charms ETC						|
+// -------------------------------------------------------------------------------------------------------------
+//Orb Of Corruption
+ItemDisplay[cx5]: %RED%O %PURPLE%Orb Of Corruption %RED%O
+//CHARMS
+
+//RARE AMMYs/RINGs/CIRCLETs
+ItemDisplay[RARE (ci0 OR ci1 OR ci2 OR ci3 OR amu OR rin OR jew)]: %RED%O %YELLOW%%NAME% %RED%O
+
+// -------------------------------------------------------------------------------------------------------------
+//						RUNES								|
+// -------------------------------------------------------------------------------------------------------------
+//1-16
+ItemDisplay[r01]: %ORANGE% El Rune [1]
+ItemDisplay[r02]: %ORANGE% Eld Rune [2]
+ItemDisplay[r03]: %ORANGE% Tir Rune [3]
+ItemDisplay[r04]: %ORANGE% Nef Rune [4]
+ItemDisplay[r05]: %ORANGE% Eth Rune [5]
+ItemDisplay[r06]: %ORANGE% Ith Rune [6]
+ItemDisplay[r07]: %ORANGE% Tal Rune [7]
+ItemDisplay[r08]: %ORANGE% Ral Rune [8]
+ItemDisplay[r09]: %ORANGE% Ort Rune [9]
+ItemDisplay[r10]: %ORANGE% Thul Rune [10]
+ItemDisplay[r11]: %ORANGE% Amn Rune [11]
+ItemDisplay[r12]: %ORANGE% Sol Rune [12]
+ItemDisplay[r13]: %ORANGE% Shael Rune [13]
+ItemDisplay[r14]: %ORANGE% Dol Rune [14]
+ItemDisplay[r15]: %ORANGE% Hel[15]
+ItemDisplay[r16]: %ORANGE% Io Rune [16]
+ItemDisplay[r17]: %ORANGE% Lum Rune [17]
+ItemDisplay[r18]: %ORANGE% Ko Rune [18]
+ItemDisplay[r19]: %ORANGE% Fal Rune [19]
+ItemDisplay[r20]: %ORANGE% Lem Rune [20]
+ItemDisplay[r21]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Pul Rune [21]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r22]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Um Rune [22]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r23]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Mal Rune [23]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r24]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Ist Rune [24]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r25]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Gul Rune [25]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r26]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Vex Rune [26]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r27]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Ohm Rune [27]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r28]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Lo Rune [28]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r29]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Sur Rune [29]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r30]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Ber Rune [30]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r31]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Jah Rune [31]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r32]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Cham Rune [32]%RED% O%PURPLE%O%RED%O%NL%
+ItemDisplay[r33]: %NL% %RED%O%PURPLE%O%RED%O%ORANGE% Zod Rune [33]%RED% O%PURPLE%O%RED%O%NL%
