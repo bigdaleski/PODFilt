@@ -6,6 +6,7 @@ ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 
 //Show me that item is ethereal
 ItemDisplay[ETH]:%NAME% %GRAY%[%WHITE%eth%GRAY%]%CONTINUE%
+ItemDisplay[!ETH]:%NAME% %CONTINUE%
 
 //ALL UNIQUES SEMI HIGHLIGHTED
 ItemDisplay[UNI]:%RED%O %TAN%%NAME% %RED%O
