@@ -1,10 +1,21 @@
 //Show Sockets
 ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 
-//Show me that item is ethereal
-ItemDisplay[ETH]: %GRAY%[%WHITE%eth%GRAY%] %NAME%%CONTINUE%
 
-//Potions
+//Show me that item is ethereal
+ItemDisplay[ETH]:[%WHITE%eth%GRAY%]% %NAME%
+
+//GENERAL COLOURS
+//ItemDisplay[RARE]: %YELLOW%%NAME%%CONTINUE%     // RARE
+//ItemDisplay[NMAG]: %WHITE%%NAME%%CONTINUE%	//Regular
+//ItemDisplay[MAG]: %BLUE%%NAME%%CONTINUE%	//Magic
+//ItemDisplay[UNI]: %GOLD%%NAME%%CONTINUE%	//Unique
+//ItemDisplay[SET]: %GREEN%%NAME%%CONTINUE%	//Set
+//ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%	//Crafted
+
+// -------------------------------------------------------------------------------------------------------------
+//						POTIONS							|
+// -------------------------------------------------------------------------------------------------------------
 ItemDisplay[rvl]: %PURPLE%FullJUV
 ItemDisplay[rvs]: %PURPLE%rejuv
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%NAME%}%CONTINUE%
@@ -17,8 +28,19 @@ ItemDisplay[mp1]: %BLUE%!%WHITE%minor mp{%NAME%}%CONTINUE%
 ItemDisplay[mp2]: %BLUE%!%WHITE%light mp{%NAME%}%CONTINUE%
 ItemDisplay[mp3]: %BLUE%!%WHITE%mana{%NAME%}%CONTINUE%
 ItemDisplay[mp4]: %BLUE%!%WHITE%great mp{%NAME%}%CONTINUE%
+//HIDE LOWER POTS OVER LVL 30
+ItemDisplay[hp1 CLVL>30]: 
+ItemDisplay[hp2 CLVL>30]: 
+ItemDisplay[hp3 CLVL>30]: 
+ItemDisplay[hp4 CLVL>30]: 
+ItemDisplay[mp1 CLVL>30]: 
+ItemDisplay[mp2 CLVL>30]:
+ItemDisplay[mp3 CLVL>30]:
+ItemDisplay[mp4 CLVL>30]:
 
-//Utilites
+// -------------------------------------------------------------------------------------------------------------
+//						UTILITIES							|
+// -------------------------------------------------------------------------------------------------------------
 ItemDisplay[tsc]: %BLUE%!%WHITE%TP
 ItemDisplay[isc]: %GREEN%!%WHITE%ID
 ItemDisplay[vps CLVL>10]:
@@ -27,3 +49,16 @@ ItemDisplay[wms CLVL>10]:
 ItemDisplay[wms CLVL<10]: %TAN%!%WHITE%thaw
 ItemDisplay[yps]: %TAN%!%WHITE%ant
 ItemDisplay[key]: %GRAY%key
+
+//Choking, Exploding, Fulminating, Oil, Rancid, Strangling
+
+//Hide Arrows+Bolts
+
+ItemDisplay[NMAG (aqv OR cqv)]: // hides regular arrows/bolts
+ItemDisplay[MAG (aqv OR cqv)]: // hides magic quivers if enabled
+
+ItemDisplay[opm]: {%NAME%}
+ItemDisplay[(gpm OR opl OR ops OR gps OR gpl)]: {%NAME%}
+ItemDisplay[(tpfs OR tpgs OR tpcs OR tpls)]: {%NAME%}
+ItemDisplay[(tpfm OR tpgm OR tpcm OR tplm)]: {%NAME%}
+ItemDisplay[(tpfl OR tpgl OR tpcl OR tpll)]: {%NAME%}
