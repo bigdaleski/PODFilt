@@ -13,12 +13,16 @@ ItemDisplay[UNI]:%RED%O %TAN%%NAME% %RED%O
 // -------------------------------------------------------------------------------------------------------------
 //						GENERAL COLOURS							|
 // -------------------------------------------------------------------------------------------------------------
-//ItemDisplay[RARE]: %YELLOW%%NAME%%CONTINUE%     // RARE
+ItemDisplay[RARE !ID]: %YELLOW%%NAME%%CONTINUE%     // RARE
+ItemDisplay[RARE ID]: %YELLOW%%NAME%%CONTINUE%	//RARE
 //ItemDisplay[NMAG]: %WHITE%%NAME%%CONTINUE%	//Regular
-//ItemDisplay[MAG]: %BLUE%%NAME%%CONTINUE%	//Magic
-//ItemDisplay[UNI]: %GOLD%%NAME%%CONTINUE%	//Unique
-//ItemDisplay[SET]: %GREEN%%NAME%%CONTINUE%	//Set
-//ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%	//Crafted
+ItemDisplay[MAG !ID]: %BLUE%%NAME%%CONTINUE%	//Magic
+ItemDisplay[MAG ID]: %BLUE%%NAME%%CONTINUE%	//Magic
+ItemDisplay[UNI !ID]: %GOLD%%NAME%%CONTINUE%	//Unique
+ItemDisplay[UNI ID]: %GOLD%%NAME%%CONTINUE%	//Unique
+ItemDisplay[SET !ID]: %GREEN%%NAME%%CONTINUE%	//Set
+ItemDisplay[SET ID]: %GREEN%%NAME%%CONTINUE%	//Set
+ItemDisplay[CRAFT ID]: %ORANGE%%NAME%%CONTINUE%	//Crafted
 
 // -------------------------------------------------------------------------------------------------------------
 //						POTIONS								|
